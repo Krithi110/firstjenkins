@@ -1,9 +1,9 @@
-pipleline{
+pipeline {
   agent any
 
   stages {
 
-    stage('clone'){
+    stage('Clone') {
       steps {
         git url: 'https://github.com/Krithi110/firstjenkins.git',
           branch: 'main'
@@ -11,10 +11,10 @@ pipleline{
     }
 
     stage('Run Script') {
-      steps{
+      steps {
         sh 'chmod +x script.sh'
         sh './script.sh'
       }
     }
   }
-}
+}        
